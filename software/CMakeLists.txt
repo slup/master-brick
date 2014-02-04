@@ -84,6 +84,7 @@ SET(SOURCES
 	"${PROJECT_SOURCE_DIR}/src/bricklib/com/spi/spi_stack/spi_stack_slave.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib/com/spi/spi_stack/spi_stack_master.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib/com/spi/spi_stack/spi_stack_select.c"
+	"${PROJECT_SOURCE_DIR}/src/bricklib/com/ondevice/ondevice.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib/bricklet/bricklet_communication.c"
 	"${PROJECT_SOURCE_DIR}/src/bricklib/bricklet/bricklet_init.c"
 	"${PROJECT_SOURCE_DIR}/src/extensions/extension_init.c"
@@ -110,6 +111,8 @@ SET(SOURCES
 	"${PROJECT_SOURCE_DIR}/src/master.c"
 	"${PROJECT_SOURCE_DIR}/src/routing.c"
 )
+
+
 
 MESSAGE(STATUS "\nFound following source files:\n ${SOURCES}\n")
 

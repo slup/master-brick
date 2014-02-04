@@ -28,6 +28,7 @@
 #include "bricklib/com/spi/spi_stack/spi_stack_master.h"
 #include "bricklib/com/spi/spi_stack/spi_stack_common.h"
 #include "bricklib/com/spi/spi_stack/spi_stack_select.h"
+#include "bricklib/com/ondevice/ondevice.h"
 #include "bricklib/drivers/adc/adc.h"
 #include "bricklib/drivers/usb/USBD_HAL.h"
 #include "bricklib/drivers/usart/usart.h"
@@ -336,5 +337,8 @@ void tick_task(const uint8_t tick_type) {
 	}
 	if(com_info.ext[0] == COM_ETHERNET || com_info.ext[1] == COM_ETHERNET) {
 		ethernet_tick(tick_type);
+	}
+	if(com_info.ext[0] == COM_ONDEVICE || com_info.ext[1] == COM_ONDEVICE) {
+		ondevice_tick(tick_type);
 	}
 }
