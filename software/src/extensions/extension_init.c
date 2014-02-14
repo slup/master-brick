@@ -185,6 +185,7 @@ void extension_init(void) {
 	/* Forcing OnDevice mode*/
 	com_info.ext_type[0] = COM_TYPE_NONE;
 	com_info.ext[0] = COM_ONDEVICE;
+	ondevice_init_extension(0);
 }
 
 bool extension_is_present(const uint8_t extension) {
